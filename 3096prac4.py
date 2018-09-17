@@ -9,7 +9,6 @@ import datetime
 
 GPIO.setmode(GPIO.BCM)
 
-
 # connect switches to pins on Rpi
 switch_reset = 4
 switch_freq = 17
@@ -56,6 +55,7 @@ def ConvertTemp(volts):
 
 # Define sensor channels
 channel = 2
+
 # Define delay between readings
 #global delay
 delay = .5
@@ -116,8 +116,8 @@ def convToLight(volts):
     percent = (volts/maxV)*100
     return round(percent,2)
 
-print("____________________________________________")
-print("Time     | Timer      | Pot  | Temp  | Light")
+print("______________________________________________")
+print("Time     | Timer      | Pot    | Temp  | Light")
 try:
     while True:
          # Read the data
