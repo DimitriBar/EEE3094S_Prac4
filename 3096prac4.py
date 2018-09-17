@@ -9,6 +9,8 @@ import datetime
 
 GPIO.setmode(GPIO.BCM)
 
+
+# connect switches to pins on Rpi
 switch_reset = 4
 switch_freq = 17
 switch_stop = 27
@@ -22,6 +24,7 @@ item = 0
 
 output = []
 
+# Setup GPIO pins
 GPIO.setup(switch_reset, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(switch_freq, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(switch_stop, GPIO.IN, pull_up_down=GPIO.PUD_UP)
