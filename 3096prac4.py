@@ -90,12 +90,12 @@ def stopCall(channel):
     #output = []
     global item
     item = 0
-    #print(isReading)
+    
 
 def dispCall(channel):
     print("____________________________________________")
     print("Time     | Timer      | Pot  | Temp  | Light")
-    # print("____________________________________________")
+   
     global output
     
     if len(output) >= 5:
