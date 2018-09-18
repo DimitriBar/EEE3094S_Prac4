@@ -6,7 +6,6 @@ import sys
 import RPi.GPIO as GPIO
 import time
 import datetime
-
 GPIO.setmode(GPIO.BCM)
 
 # connect switches to pins on Rpi
