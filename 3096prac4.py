@@ -8,7 +8,7 @@ import time
 import datetime
 GPIO.setmode(GPIO.BCM)
 
-# connect switches to pins on Rpi
+# sets variables for switch numbers
 switch_reset = 4
 switch_freq = 17
 switch_stop = 27
