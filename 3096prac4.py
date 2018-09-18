@@ -91,7 +91,7 @@ def stopCall(channel):
     global item
     item = 0
     
-
+#displays first 5 readings (or howevver many have been made)
 def dispCall(channel):
     print("____________________________________________")
     print("Time     | Timer      | Pot  | Temp  | Light")
