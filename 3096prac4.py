@@ -80,8 +80,6 @@ def freqCall(channel):
 
 isReading = True
 
-#lookrandomedit
-
 def stopCall(channel):
     print("stopCall")
     global isReading
@@ -120,9 +118,7 @@ print("______________________________________________")
 print("Time     | Timer      | Pot    | Temp  | Light")
 try:
     while True:
-         # Read the data
-         
-         
+         # Infinite while loop to read and display the data
         if timer > 59.5:
             timer = 0
             mins += 1
