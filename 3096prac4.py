@@ -36,6 +36,7 @@ spi.max_speed_hz=1000000
 # RPI has one bus (#0) and two devices (#0 & #1)
 # function to read ADC data from a channel
 
+#gets data from ADC
 def GetData(channel): # channel must be an integer 0-7
     adc = spi.xfer2([1,(8+channel)<<4,0]) # sending 3 bytes
     data = ((adc[1]&3) << 8) + adc[2]
