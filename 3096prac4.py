@@ -6,10 +6,9 @@ import sys
 import RPi.GPIO as GPIO
 import time
 import datetime
-
 GPIO.setmode(GPIO.BCM)
 
-# connect switches to pins on Rpi
+# sets variables for switch numbers
 switch_reset = 4
 switch_freq = 17
 switch_stop = 27
@@ -36,6 +35,7 @@ spi.max_speed_hz=1000000
 # RPI has one bus (#0) and two devices (#0 & #1)
 # function to read ADC data from a channel
 
+#gets data from ADC
 def GetData(channel): # channel must be an integer 0-7
     adc = spi.xfer2([1,(8+channel)<<4,0]) # sending 3 bytes
     data = ((adc[1]&3) << 8) + adc[2]
@@ -80,8 +80,6 @@ def freqCall(channel):
 
 isReading = True
 
-#lookrandomedit
-
 def stopCall(channel):
     print("stopCall")
     global isReading
@@ -91,7 +89,7 @@ def stopCall(channel):
     global item
     item = 0
     
-
+#displays first 5 readings (or howevver many have been made)
 def dispCall(channel):
     print("____________________________________________")
     print("Time     | Timer      | Pot  | Temp  | Light")
@@ -120,9 +118,7 @@ print("______________________________________________")
 print("Time     | Timer      | Pot    | Temp  | Light")
 try:
     while True:
-         # Read the data
-         
-         
+         # Infinite while loop to read and display the data
         if timer > 59.5:
             timer = 0
             mins += 1
