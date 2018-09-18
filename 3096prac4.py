@@ -111,6 +111,7 @@ GPIO.add_event_detect(switch_freq,GPIO.FALLING,callback=freqCall,bouncetime=200)
 GPIO.add_event_detect(switch_stop,GPIO.FALLING,callback=stopCall,bouncetime=200)
 GPIO.add_event_detect(switch_display,GPIO.FALLING,callback=dispCall,bouncetime=200)
 
+#function to convert reading to light as a percentage
 def convToLight(volts):
     maxV = 3
     percent = (volts/maxV)*100
