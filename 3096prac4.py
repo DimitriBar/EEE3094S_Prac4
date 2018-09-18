@@ -117,8 +117,10 @@ def convToLight(volts):
     percent = (volts/maxV)*100
     return round(percent,2)
 
+# create table format for readings
 print("____________________________________________")
 print("Time     | Timer      | Pot  | Temp  | Light")
+
 try:
     while True:
          # Read the data
