@@ -9,7 +9,6 @@ import datetime
 
 GPIO.setmode(GPIO.BCM)
 
-
 # connect switches to pins on Rpi
 switch_reset = 4
 switch_freq = 17
@@ -80,8 +79,6 @@ def freqCall(channel):
 
 isReading = True
 
-#lookrandomedit
-
 def stopCall(channel):
     print("stopCall")
     global isReading
@@ -90,7 +87,6 @@ def stopCall(channel):
     #output = []
     global item
     item = 0
-    #print(isReading)
 
 def dispCall(channel):
     print("____________________________________________")
